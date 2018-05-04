@@ -1,0 +1,14 @@
+{
+  "name": "MediaPlayer",
+  "description": "MediaPlayer application using Raspberry Pi and tool called omxplayer",
+  "website": "https://github.com/akoltun75/MediaPlayerProject",
+  "repository": "https://github.com/akoltun75/MediaPlayerProject",
+  "logo": "https://node-js-sample.herokuapp.com/node.svg",
+  "success_url": "/",
+  "keywords": [
+    "node",
+    "express",
+    "socket.io",
+    "realtime",
+    "websocket"
+  ]}

@@ -1,0 +1,13 @@
+{
+  "name": "MediaPlayer",
+  "version": "0.0.1",
+  "description": "MediaPlayer application using Raspberry Pi and tool called omxplayer",
+  "dependencies": {
+    "express": "^4.15.2",
+     "omxcontrol": "*",
+    "socket.io": "^1.7.4"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
