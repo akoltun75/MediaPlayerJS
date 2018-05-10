@@ -1,4 +1,3 @@
-<!-- Main Client Page -->
 <!doctype html>
 <html>
   <head>
@@ -7,9 +6,8 @@
   <body>
     <ul id="messages"></ul>
     <form action="">
-      Filename: 
-      <input id="MainText" autocomplete="off" />
-    <button id="PlayButton">Play</button>
+      <input id="mainText" autocomplete="off" /><br>
+     Filename <button id="PlayButton">Play</button>
       <button id="PauseButton">Pause</button>
       <button id="QuitButton">Quit</button>
     </form>
@@ -21,8 +19,12 @@
         //When user clicks the submit form
          $('form').submit(function(){
           //If play button was clicked 
-        if($('#PlayButton').is(document.activeElement))
-           socket.emit('omxCommand','omxplayer '+$('#MainText').val());
+        if($('#PlayButton').is(document.activeElement)){
+            if($('#mainText').val().trim()=="")
+              alert('Need to enter an actual filename');
+           else
+           socket.emit('omxCommand','omxplayer '+$('#mainText').val());
+         }
           //If pause button was clicked
         else if($('#PauseButton').is(document.activeElement))
            socket.emit('omxCommand','p');
@@ -30,7 +32,7 @@
           else
           socket.emit('omxCommand','q');
            //Clear text box 
-          $('#MainText').val('');
+          $('#mainText').val('');
         });
         
       });
